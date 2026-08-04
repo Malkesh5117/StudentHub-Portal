@@ -1,0 +1,17 @@
+# Dependencies & environment
+node_modules/
+vendor/
+.env
+*.log
+
+# Sensitive submission storage
+data/submissions/
+
+# Uploaded content
+uploads/event-posters/*
+!uploads/event-posters/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
