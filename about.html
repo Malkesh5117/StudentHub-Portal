@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | About Us</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">EST. FOR EVERY COLLEGE, EVERYWHERE • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>About Our Portal & Academic Framework</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a class="active" href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>About Us</span>
+      </nav>
+
+      <section class="panel">
+        <h2>About StudentHub</h2>
+        <p>StudentHub is an academic portal engineered to bridge communication gaps among university students, faculty members, and administrative staff. Designed with accessibility, responsive layout architecture, and enterprise security in mind, the platform serves as a single source of truth for daily campus operations.</p>
+      </section>
+
+      <div class="about-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+        <article class="card">
+          <h3>Our Vision</h3>
+          <p>To foster an inclusive, digitally integrated academic ecosystem where students can focus on learning, skill acquisition, and co-curricular achievements with minimal administrative friction.</p>
+        </article>
+
+        <article class="card">
+          <h3>Core Technology Principles</h3>
+          <p>Built following modern web development standards including semantic HTML5 elements, CSS Grid and Flexbox responsiveness, client-side and server-side data validations, RESTful JSON APIs, and secure RBAC sessions.</p>
+        </article>
+
+        <article class="card">
+          <h3>Academic Information</h3>
+          <p>Developed under the <strong>Web Development Frameworks (ITUE203)</strong> curriculum at the Faculty of Technology and Engineering (FTE), Charotar University of Science and Technology (CHARUSAT).</p>
+          <p><strong>Author:</strong> Malkesh Patel (Roll No: 25DCS089)</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • CHARUSAT FTE</p>
+      <p class="sub-footer">Developed by Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

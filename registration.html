@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Student Registration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">ADMISSION & ENROLLMENT • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Student Account Registration</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="active" href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container" style="max-width: 680px;">
+      <section class="form-card">
+        <h2>Register for StudentHub</h2>
+        <p class="muted">Fill in your academic and personal credentials to create your student account.</p>
+
+        <form action="signup.php" method="POST" id="studentRegistrationForm" novalidate>
+          <div class="form-group">
+            <label for="fullName">Full Legal Name <span class="required">*</span>:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g. Malkesh Patel" required />
+            <span class="error-msg" id="fullNameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="username">Portal Username <span class="required">*</span>:</label>
+            <input type="text" id="username" name="username" placeholder="e.g. malkesh089" required />
+            <span class="error-msg" id="usernameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Institutional Email Address <span class="required">*</span>:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. 25dcs089@charusat.edu.in" required />
+            <span class="error-msg" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mobile">Mobile Contact Number <span class="required">*</span>:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" required />
+            <span class="error-msg" id="mobileError"></span>
+          </div>
+
+          <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="password">Password <span class="required">*</span>:</label>
+              <input type="password" id="password" name="password" placeholder="At least 8 characters" required />
+              <div class="password-meter-container" style="margin-top: 0.35rem;">
+                <div class="password-meter-bar" id="passwordMeterBar"></div>
+                <small id="passwordMeterText" class="muted">Password strength</small>
+              </div>
+              <span class="error-msg" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="confirmPassword">Confirm Password <span class="required">*</span>:</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required />
+              <span class="error-msg" id="confirmPasswordError"></span>
+            </div>
+          </div>
+
+          <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="form-group">
+              <label for="course">Academic Program <span class="required">*</span>:</label>
+              <select id="course" name="course" required>
+                <option value="">-- Choose Program --</option>
+                <option value="B.Tech CSE" selected>B.Tech Computer Science & Engineering</option>
+                <option value="B.Tech IT">B.Tech Information Technology</option>
+                <option value="B.Tech CE">B.Tech Computer Engineering</option>
+                <option value="BBA">Bachelor of Business Administration</option>
+                <option value="B.Com">Bachelor of Commerce</option>
+              </select>
+              <span class="error-msg" id="courseError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Academic Year <span class="required">*</span>:</label>
+              <select id="year" name="year" required>
+                <option value="">-- Choose Year --</option>
+                <option value="1st Year">1st Year (Freshman)</option>
+                <option value="2nd Year" selected>2nd Year (Sophomore)</option>
+                <option value="3rd Year">3rd Year (Junior)</option>
+                <option value="4th Year">4th Year (Senior)</option>
+              </select>
+              <span class="error-msg" id="yearError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Gender <span class="required">*</span>:</label>
+            <div class="radio-group" style="display: flex; gap: 1.5rem; margin-top: 0.25rem;">
+              <label><input type="radio" name="gender" value="Male" checked /> Male</label>
+              <label><input type="radio" name="gender" value="Female" /> Female</label>
+              <label><input type="radio" name="gender" value="Other" /> Other</label>
+            </div>
+            <span class="error-msg" id="genderError"></span>
+          </div>
+
+          <div class="form-group checkbox-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-top: 1rem;">
+            <input type="checkbox" id="terms" name="terms" value="1" required />
+            <label for="terms">I verify that the provided information is accurate and agree to follow university academic integrity guidelines.</label>
+          </div>
+          <span class="error-msg" id="termsError"></span>
+
+          <button class="btn btn-primary" type="submit" style="width: 100%; margin-top: 1.25rem;">Submit Registration</button>
+        </form>
+
+        <div class="form-footer" style="margin-top: 1.5rem; text-align: center;">
+          <p>Already registered? <a href="login.html">Sign In here</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • CHARUSAT FTE • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

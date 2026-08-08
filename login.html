@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Portal Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">AUTHENTICATION GATEWAY • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Secure Account Access</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a class="active" href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container" style="max-width: 520px;">
+      <section class="form-card">
+        <h2>Sign In to Your Account</h2>
+        <p class="muted">Access your personalized student or administrative workspace.</p>
+
+        <form action="login.php" method="POST" id="loginForm">
+          <div class="form-group">
+            <label for="role">Account Role:</label>
+            <select id="role" name="role" required>
+              <option value="student" selected>Student</option>
+              <option value="admin">Administrator</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Institutional Email:</label>
+            <input type="email" id="email" name="email" placeholder="e.g. 25dcs089@charusat.edu.in" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your secret password" required />
+          </div>
+
+          <div class="form-group checkbox-group" style="display: flex; align-items: center; gap: 0.5rem;">
+            <input type="checkbox" id="remember_me" name="remember_me" value="1" />
+            <label for="remember_me">Remember my login on this device</label>
+          </div>
+
+          <button class="btn btn-primary" type="submit" style="width: 100%; margin-top: 1rem;">Sign In</button>
+        </form>
+
+        <div class="form-footer" style="margin-top: 1.5rem; text-align: center;">
+          <p>Don't have an account yet? <a href="registration.html">Register here</a></p>
+          <p><a href="index.html">← Return to Homepage</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Developed by Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

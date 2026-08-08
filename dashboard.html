@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Student Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">ACADEMIC WORKSPACE • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Student Academic Dashboard</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a class="active" href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel welcome-panel">
+        <div class="welcome-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h2>Welcome back, Malkesh Patel!</h2>
+            <p class="muted">Enrollment ID: <strong>25DCS089</strong> • Department: <strong>Computer Science & Engineering</strong> • Semester 3</p>
+          </div>
+          <a class="btn btn-secondary" href="login.html">Logout</a>
+        </div>
+      </section>
+
+      <section class="metrics-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-top: 1.5rem;">
+        <div class="metric-card card">
+          <div class="metric-num">91%</div>
+          <div class="metric-label">Overall Attendance</div>
+          <small class="text-success">✔ Exam Eligible</small>
+        </div>
+        <div class="metric-card card">
+          <div class="metric-num">8.92</div>
+          <div class="metric-label">Current CGPA</div>
+          <small class="text-info">Ranked Top 10%</small>
+        </div>
+        <div class="metric-card card">
+          <div class="metric-num">3</div>
+          <div class="metric-label">Registered Events</div>
+          <small class="text-primary">Upcoming: TechFest 2026</small>
+        </div>
+        <div class="metric-card card">
+          <div class="metric-num">₹0</div>
+          <div class="metric-label">Pending Dues</div>
+          <small class="text-success">✔ Semester Fees Paid</small>
+        </div>
+      </section>
+
+      <div class="dashboard-columns" style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-top: 1.5rem;">
+        <section class="panel">
+          <h3>Today's Lecture Schedule</h3>
+          <table class="table-responsive" style="width: 100%; border-collapse: collapse; margin-top: 0.75rem;">
+            <thead>
+              <tr style="text-align: left; background: var(--bg-alt);">
+                <th>Time Slot</th>
+                <th>Subject Name</th>
+                <th>Room</th>
+                <th>Faculty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>09:00 - 10:00 AM</td>
+                <td>Computer Networks</td>
+                <td>Room 204</td>
+                <td>Dr. Rajesh Patel</td>
+              </tr>
+              <tr>
+                <td>10:00 - 11:00 AM</td>
+                <td>Database Management</td>
+                <td>Room 204</td>
+                <td>Prof. Sneha Sharma</td>
+              </tr>
+              <tr>
+                <td>11:00 - 12:00 PM</td>
+                <td>Web Development Frameworks</td>
+                <td>Lab 3</td>
+                <td>Prof. Harshad Patel</td>
+              </tr>
+              <tr>
+                <td>01:00 - 03:00 PM</td>
+                <td>Operating Systems Lab</td>
+                <td>Lab 5</td>
+                <td>Prof. Amit Verma</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="panel">
+          <h3>Recent Notices</h3>
+          <ul class="notice-list" style="padding-left: 1.25rem; line-height: 1.8;">
+            <li><strong>Mid-term timetable:</strong> Published for 3rd semester CSE.</li>
+            <li><strong>TechFest 2026:</strong> Hackathon registrations closing soon.</li>
+            <li><strong>Library:</strong> IEEE digital access credentials renewed.</li>
+          </ul>
+          <a class="btn btn-primary" href="events.html" style="width: 100%; margin-top: 1rem;">View All Events</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

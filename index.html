@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | College Academic Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <div class="site-banner" id="banner">
+    📢 Welcome to the 2026-27 Academic Semester! Registration for Technical & Cultural Events is now open.
+    <button class="banner-close" type="button" aria-label="Close banner" onclick="closeBanner()">×</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">EST. FOR EVERY COLLEGE, EVERYWHERE • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Centralized Academic & Campus Management Portal</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <div class="hero">
+        <div class="hero-copy">
+          <h2>Streamlined Campus Experience for Modern Students</h2>
+          <p>StudentHub connects students, faculty, and administrative staff through an intuitive digital environment. Access your class timetables, monitor daily attendance, track semester grades, manage fee payments, and explore campus events seamlessly.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="registration.html">Create Student Account</a>
+            <a class="btn btn-secondary" href="login.html">Sign In to Portal</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <h3>Quick Access Highlights</h3>
+          <p class="muted">Key academic and co-curricular services available on StudentHub:</p>
+          <ul class="quick-links">
+            <li><strong>Class Timetable:</strong> View updated lecture slots and laboratory schedules.</li>
+            <li><strong>Live Attendance:</strong> Real-time subject-wise tracking and eligibility status.</li>
+            <li><strong>Campus Events:</strong> Register for hackathons, cultural festivals, and technical workshops.</li>
+            <li><strong>Semester Results:</strong> Comprehensive SGPA/CGPA grade sheets and course credits.</li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="portal-features" style="margin-top: 2.5rem;">
+        <h3 class="section-title">Core Academic Features</h3>
+        <div class="features-grid">
+          <article class="card">
+            <h4>Academic Dashboard</h4>
+            <p>Personalized overview of course enrollments, current semester progress, credit summary, and exam notices.</p>
+            <a href="dashboard.html" class="link-arrow">Open Dashboard →</a>
+          </article>
+          <article class="card">
+            <h4>Attendance Monitoring</h4>
+            <p>Detailed attendance records per subject with percentage calculations and minimum eligibility thresholds.</p>
+            <a href="attendence.html" class="link-arrow">Check Attendance →</a>
+          </article>
+          <article class="card">
+            <h4>Events & Competitions</h4>
+            <p>Participate in annual symposiums, coding competitions, sports meets, and guest lecture series.</p>
+            <a href="events.html" class="link-arrow">Browse Events →</a>
+          </article>
+          <article class="card">
+            <h4>Faculty Directory</h4>
+            <p>Find faculty profiles, academic specializations, email contacts, and designated office consultation hours.</p>
+            <a href="faculty.html" class="link-arrow">View Faculty →</a>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Faculty of Technology and Engineering (FTE), CHARUSAT</p>
+      <p class="sub-footer">Developed by <strong>Malkesh Patel</strong> (Roll No: <strong>25DCS089</strong>) • Subject: ITUE203 Web Development Frameworks</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

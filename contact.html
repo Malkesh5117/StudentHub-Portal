@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Contact & Inquiries</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">CAMPUS HELPDESK • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Contact Us & Student Inquiries</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a class="active" href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+        <section class="panel">
+          <h2>Campus Information</h2>
+          <p>Have questions regarding admission, examination schedules, event participation, or technical issues with the StudentHub portal? Reach out to our campus office.</p>
+
+          <div class="info-block" style="margin-top: 1.5rem; line-height: 1.8;">
+            <p><strong>Institution:</strong> Faculty of Technology and Engineering (FTE), CHARUSAT</p>
+            <p><strong>Campus Address:</strong> Charusat Campus, Highway 139, Changa, Gujarat 388421</p>
+            <p><strong>Email:</strong> helpdesk@studenthub.charusat.ac.in</p>
+            <p><strong>Direct Helpline:</strong> +91 2697 265011 / 265022</p>
+            <p><strong>Operating Hours:</strong> Monday – Saturday: 9:00 AM – 5:00 PM</p>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2>Send an Inquiry</h2>
+          <form action="process_contact.php" method="POST" id="contactForm">
+            <div class="form-group">
+              <label for="contactName">Your Name:</label>
+              <input type="text" id="contactName" name="name" placeholder="e.g. Malkesh Patel" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactEmail">Email Address:</label>
+              <input type="email" id="contactEmail" name="email" placeholder="e.g. malkesh.patel@studenthub.edu" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactSubject">Subject / Query Category:</label>
+              <input type="text" id="contactSubject" name="subject" placeholder="e.g. Timetable conflict query" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message Details:</label>
+              <textarea id="contactMessage" name="message" rows="4" placeholder="Type your detailed message here..." required></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit" style="width: 100%; margin-top: 1rem;">Send Inquiry Message</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
