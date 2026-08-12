@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Faculty Directory</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">DEPARTMENT DIRECTORY • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Faculty & Mentorship Directory</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a class="active" href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel">
+        <h2>Department of Computer Science & Engineering</h2>
+        <p class="muted">Reach out to faculty members during their scheduled consultation hours or via official email.</p>
+
+        <div class="faculty-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <article class="card">
+            <h3>Dr. Rajesh Patel</h3>
+            <p class="role-badge">Head of Department & Professor</p>
+            <p><strong>Specialization:</strong> Computer Networks, Distributed Systems</p>
+            <p><strong>Office:</strong> Room 301, Engineering Block</p>
+            <p><strong>Email:</strong> rajesh.patel@studenthub.edu</p>
+            <p><strong>Consultation:</strong> Mon/Wed 03:00 - 04:30 PM</p>
+          </article>
+
+          <article class="card">
+            <h3>Prof. Harshad Patel</h3>
+            <p class="role-badge">Assistant Professor</p>
+            <p><strong>Specialization:</strong> Web Development Frameworks, Cloud Computing</p>
+            <p><strong>Office:</strong> Room 305, Engineering Block</p>
+            <p><strong>Email:</strong> harshad.patel@studenthub.edu</p>
+            <p><strong>Consultation:</strong> Tue/Thu 02:00 - 04:00 PM</p>
+          </article>
+
+          <article class="card">
+            <h3>Prof. Sneha Sharma</h3>
+            <p class="role-badge">Associate Professor</p>
+            <p><strong>Specialization:</strong> Database Management Systems, Data Mining</p>
+            <p><strong>Office:</strong> Room 307, Engineering Block</p>
+            <p><strong>Email:</strong> sneha.sharma@studenthub.edu</p>
+            <p><strong>Consultation:</strong> Wed/Fri 11:00 AM - 01:00 PM</p>
+          </article>
+
+          <article class="card">
+            <h3>Prof. Amit Verma</h3>
+            <p class="role-badge">Assistant Professor</p>
+            <p><strong>Specialization:</strong> Operating Systems, Linux Kernel Architecture</p>
+            <p><strong>Office:</strong> Room 309, Engineering Block</p>
+            <p><strong>Email:</strong> amit.verma@studenthub.edu</p>
+            <p><strong>Consultation:</strong> Mon/Fri 02:00 - 03:30 PM</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

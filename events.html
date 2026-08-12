@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Campus Events</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">CAMPUS ENGAGEMENT • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Campus Events & Technical Symposiums</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a class="active" href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+          <h2>Upcoming College Events & Workshops</h2>
+          <div class="search-box" style="display: flex; gap: 0.5rem;">
+            <input type="text" id="eventSearchInput" placeholder="Search events by title..." style="padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid var(--border);" />
+            <select id="eventCategoryFilter" style="padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid var(--border);">
+              <option value="all">All Categories</option>
+              <option value="Technical">Technical</option>
+              <option value="Cultural">Cultural</option>
+              <option value="Sports">Sports</option>
+              <option value="Workshop">Workshop</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="eventsContainer" class="events-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+          <article class="card">
+            <span class="badge badge-primary">Technical</span>
+            <h3>TechFest 2026 - Hackathon</h3>
+            <p>Annual 24-hour coding hackathon focusing on AI, Cloud, and Web Framework solutions.</p>
+            <p><strong>Date:</strong> 15 Nov 2026 • <strong>Venue:</strong> Auditorium</p>
+            <button class="btn btn-primary" onclick="alert('Registered successfully!')">Register</button>
+          </article>
+          <article class="card">
+            <span class="badge badge-secondary">Cultural</span>
+            <h3>Spandan Cultural Gala</h3>
+            <p>Annual youth festival featuring music competitions, drama, and fine arts exhibits.</p>
+            <p><strong>Date:</strong> 02 Dec 2026 • <strong>Venue:</strong> Open Air Theater</p>
+            <button class="btn btn-secondary" onclick="alert('Registered successfully!')">Register</button>
+          </article>
+          <article class="card">
+            <span class="badge badge-primary">Workshop</span>
+            <h3>Docker & Microservices Bootcamp</h3>
+            <p>Hands-on architectural workshop covering containerization and scalable backend deployment.</p>
+            <p><strong>Date:</strong> 18 Dec 2026 • <strong>Venue:</strong> Lab 3</p>
+            <button class="btn btn-primary" onclick="alert('Registered successfully!')">Register</button>
+          </article>
+        </div>
+
+        <div class="pagination-controls" id="eventsPagination" style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 2rem;">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

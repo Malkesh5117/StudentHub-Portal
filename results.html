@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Semester Results</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">EXAMINATION & EVALUATION • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Semester Examination Results</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a class="active" href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+          <h2>Grade Card — B.Tech Computer Science & Engineering</h2>
+          <div class="badge badge-success">SGPA: 9.10 | CGPA: 8.92</div>
+        </div>
+        <p class="muted">Student: <strong>Malkesh Patel</strong> • Enrollment No: <strong>25DCS089</strong> • Semester: <strong>3rd (Regular)</strong></p>
+
+        <div style="overflow-x: auto; margin-top: 1.5rem;">
+          <table class="table-responsive" style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background: var(--bg-alt); text-align: left;">
+                <th>Code</th>
+                <th>Course Name</th>
+                <th>Credits</th>
+                <th>Theory Grade</th>
+                <th>Practical Grade</th>
+                <th>Overall Grade</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ITUE201</td>
+                <td>Data Structures & Algorithms</td>
+                <td>4</td>
+                <td>AA</td>
+                <td>AA</td>
+                <td>AA</td>
+                <td><span class="status-tag status-eligible">PASS</span></td>
+              </tr>
+              <tr>
+                <td>ITUE202</td>
+                <td>Database Management Systems</td>
+                <td>4</td>
+                <td>AB</td>
+                <td>AA</td>
+                <td>AA</td>
+                <td><span class="status-tag status-eligible">PASS</span></td>
+              </tr>
+              <tr>
+                <td>ITUE203</td>
+                <td>Web Development Frameworks</td>
+                <td>4</td>
+                <td>AA</td>
+                <td>AA</td>
+                <td>AA</td>
+                <td><span class="status-tag status-eligible">PASS</span></td>
+              </tr>
+              <tr>
+                <td>ITUE204</td>
+                <td>Operating Systems</td>
+                <td>4</td>
+                <td>AB</td>
+                <td>AB</td>
+                <td>AB</td>
+                <td><span class="status-tag status-eligible">PASS</span></td>
+              </tr>
+              <tr>
+                <td>ITUE205</td>
+                <td>Computer Networks</td>
+                <td>4</td>
+                <td>AA</td>
+                <td>AB</td>
+                <td>AA</td>
+                <td><span class="status-tag status-eligible">PASS</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr style="font-weight: bold; background: var(--bg-alt);">
+                <td colspan="2">Total Credits Earned: 20</td>
+                <td colspan="3">Semester Performance Index (SGPA): 9.10</td>
+                <td colspan="2">Result: First Class with Distinction</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

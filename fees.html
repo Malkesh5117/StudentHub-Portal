@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Fee Details</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">FINANCE & ACCOUNTS • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Tuition & Institutional Fee Management</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a class="active" href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+          <h2>Fee Payment Status (Academic Year 2026-27)</h2>
+          <div class="badge badge-success">Dues Pending: ₹0 (Fully Cleared)</div>
+        </div>
+        <p class="muted">Student: <strong>Malkesh Patel</strong> • Roll No: <strong>25DCS089</strong> • Program: <strong>B.Tech CSE</strong></p>
+
+        <div style="overflow-x: auto; margin-top: 1.5rem;">
+          <table class="table-responsive" style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background: var(--bg-alt); text-align: left;">
+                <th>Transaction Ref</th>
+                <th>Fee Head Description</th>
+                <th>Amount</th>
+                <th>Payment Date</th>
+                <th>Payment Mode</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TXN-2026-8891</td>
+                <td>3rd Semester Tuition Fee</td>
+                <td>₹65,000</td>
+                <td>12 Aug 2026</td>
+                <td>Net Banking / HDFC</td>
+                <td><span class="status-tag status-eligible">PAID</span></td>
+              </tr>
+              <tr>
+                <td>TXN-2026-8892</td>
+                <td>University Exam Fee</td>
+                <td>₹2,500</td>
+                <td>12 Aug 2026</td>
+                <td>UPI Gateway</td>
+                <td><span class="status-tag status-eligible">PAID</span></td>
+              </tr>
+              <tr>
+                <td>TXN-2026-8893</td>
+                <td>Advanced Computing Lab & Library Fee</td>
+                <td>₹5,000</td>
+                <td>12 Aug 2026</td>
+                <td>UPI Gateway</td>
+                <td><span class="status-tag status-eligible">PAID</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr style="font-weight: bold; background: var(--bg-alt);">
+                <td colspan="2">Total Institutional Fees Paid</td>
+                <td>₹72,500</td>
+                <td colspan="3">Payment Verified by Accounts Department</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudentHub | Academic Timetable</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="top-tools">
+    <button class="theme-btn" type="button" aria-label="Switch theme" onclick="toggleTheme()">🌙</button>
+    <button class="menu-btn" type="button" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+  </div>
+
+  <header class="site-header">
+    <div class="topbar">ACADEMIC SCHEDULE • CHARUSAT FTE</div>
+    <div class="header-content">
+      <h1>StudentHub</h1>
+      <p>Weekly Class Timetable</p>
+    </div>
+  </header>
+
+  <nav class="navbar" id="menu" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="registration.html">Registration</a>
+    <a href="login.html">Login</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="events.html">Events</a>
+    <a href="attendence.html">Attendance</a>
+    <a class="active" href="timetable.html">Timetable</a>
+    <a href="faculty.html">Faculty</a>
+    <a href="results.html">Results</a>
+    <a href="fees.html">Fees</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="section">
+    <div class="container">
+      <section class="panel">
+        <h2>Weekly Class Schedule (3rd Semester - CSE)</h2>
+        <p class="muted">Classroom: <strong>Room 204</strong> | Lab Sessions: <strong>Computer Labs 3 & 5</strong></p>
+
+        <div style="overflow-x: auto; margin-top: 1.5rem;">
+          <table class="table-responsive" style="width: 100%; border-collapse: collapse; text-align: center;">
+            <thead>
+              <tr style="background: var(--bg-alt);">
+                <th>Day</th>
+                <th>09:00 - 10:00</th>
+                <th>10:00 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 01:00</th>
+                <th>01:00 - 02:00</th>
+                <th>02:00 - 04:00 (Practical Lab)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monday</strong></td>
+                <td>Computer Networks</td>
+                <td>DBMS</td>
+                <td>Java Programming</td>
+                <td rowspan="5" style="vertical-align: middle; background: var(--bg-alt); font-weight: bold;">LUNCH BREAK</td>
+                <td>Web Development</td>
+                <td>WDF Lab (Lab 3)</td>
+              </tr>
+              <tr>
+                <td><strong>Tuesday</strong></td>
+                <td>Operating Systems</td>
+                <td>Java Programming</td>
+                <td>DBMS</td>
+                <td>Computer Networks</td>
+                <td>DBMS Lab (Lab 2)</td>
+              </tr>
+              <tr>
+                <td><strong>Wednesday</strong></td>
+                <td>Web Development</td>
+                <td>Operating Systems</td>
+                <td>Computer Networks</td>
+                <td>DBMS</td>
+                <td>OS Lab (Lab 5)</td>
+              </tr>
+              <tr>
+                <td><strong>Thursday</strong></td>
+                <td>Java Programming</td>
+                <td>Computer Networks</td>
+                <td>Web Development</td>
+                <td>Operating Systems</td>
+                <td>CN Lab (Lab 4)</td>
+              </tr>
+              <tr>
+                <td><strong>Friday</strong></td>
+                <td>DBMS</td>
+                <td>Operating Systems</td>
+                <td>Java Programming</td>
+                <td>Project Lab</td>
+                <td>Industry Seminar / Mentoring</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 StudentHub Portal • Malkesh Patel (25DCS089)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
