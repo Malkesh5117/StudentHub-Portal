@@ -1,5 +1,5 @@
 /**
- * StudentHub Portal - Complete Client-Side Interactivity & Form Validation (Practical 5)
+ * StudentHub Portal - Complete Client-Side Interactivity, Validation & JSON Fetch (Practical 6)
  * Developed by Malkesh Patel (25DCS089)
  */
 
@@ -24,17 +24,6 @@ function closeBanner() {
   if (banner) banner.style.display = "none";
 }
 
-function openModal(modalId = "modal") {
-  const modal = document.getElementById(modalId);
-  if (modal) modal.style.display = "flex";
-}
-
-function closeModal(modalId = "modal") {
-  const modal = document.getElementById(modalId);
-  if (modal) modal.style.display = "none";
-}
-
-// Form Validation Logic
 document.addEventListener("DOMContentLoaded", function () {
   // Theme restoration
   if (localStorage.getItem("studenthub_theme") === "dark") {
@@ -60,146 +49,131 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Registration Form Validation (Practical 5)
+  // Dynamic Event Rendering with Fetch API (Practical 6)
+  const eventsContainer = document.getElementById("eventsContainer");
+  const searchInput = document.getElementById("eventSearchInput");
+  const categoryFilter = document.getElementById("eventCategoryFilter");
+  const paginationContainer = document.getElementById("eventsPagination");
+
+  if (eventsContainer) {
+    let allEvents = [];
+    let currentPage = 1;
+    const itemsPerPage = 6;
+
+    async function loadEventsData() {
+      try {
+        const response = await fetch("data/events.json");
+        if (!response.ok) throw new Error("Network response was not ok");
+        allEvents = await response.json();
+        renderFilteredEvents();
+      } catch (err) {
+        console.warn("Could not load events.json, falling back to static markup:", err);
+      }
+    }
+
+    function renderFilteredEvents() {
+      const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : "";
+      const selectedCategory = categoryFilter ? categoryFilter.value : "all";
+
+      const filtered = allEvents.filter(ev => {
+        const matchesCategory = selectedCategory === "all" || ev.category.toLowerCase() === selectedCategory.toLowerCase();
+        const matchesSearch = ev.title.toLowerCase().includes(searchTerm) || ev.description.toLowerCase().includes(searchTerm);
+        return matchesCategory && matchesSearch;
+      });
+
+      const totalPages = Math.ceil(filtered.length / itemsPerPage) || 1;
+      if (currentPage > totalPages) currentPage = 1;
+
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const pageItems = filtered.slice(startIndex, startIndex + itemsPerPage);
+
+      if (pageItems.length === 0) {
+        eventsContainer.innerHTML = '<p class="empty-state" style="grid-column: 1/-1; text-align: center; padding: 2rem;">No matching events found.</p>';
+      } else {
+        eventsContainer.innerHTML = pageItems.map(ev => `
+          <article class="card">
+            <span class="badge badge-primary">${ev.category}</span>
+            <h3 style="margin-top: 0.5rem;">${ev.title}</h3>
+            <p>${ev.description}</p>
+            <p><strong>Date:</strong> ${ev.date} • <strong>Venue:</strong> ${ev.location}</p>
+            <button class="btn btn-primary" onclick="alert('Successfully registered for: ${ev.title.replace(/'/g, "\\'")}')">Register for Event</button>
+          </article>
+        `).join("");
+      }
+
+      // Render Pagination
+      if (paginationContainer) {
+        let pagHtml = "";
+        for (let i = 1; i <= totalPages; i++) {
+          pagHtml += `<button class="btn ${i === currentPage ? 'btn-primary' : 'btn-secondary'}" style="padding: 0.4rem 0.8rem;" onclick="goToPage(${i})">${i}</button>`;
+        }
+        paginationContainer.innerHTML = totalPages > 1 ? pagHtml : "";
+      }
+    }
+
+    window.goToPage = function(page) {
+      currentPage = page;
+      renderFilteredEvents();
+    };
+
+    if (searchInput) {
+      let debounceTimeout;
+      searchInput.addEventListener("input", function () {
+        clearTimeout(debounceTimeout);
+        debounceTimeout = setTimeout(() => {
+          currentPage = 1;
+          renderFilteredEvents();
+        }, 250);
+      });
+    }
+
+    if (categoryFilter) {
+      categoryFilter.addEventListener("change", function () {
+        currentPage = 1;
+        renderFilteredEvents();
+      });
+    }
+
+    loadEventsData();
+  }
+
+  // Registration Validation
   const regForm = document.getElementById("studentRegistrationForm");
   if (regForm) {
     const rules = {
-      fullName: {
-        regex: /^[A-Za-z][A-Za-z .'-]{2,39}$/,
-        message: "Full name must be 3-40 characters with letters only."
-      },
-      username: {
-        regex: /^[a-z][a-z0-9_]{2,29}$/,
-        message: "Username must start with a lowercase letter (3-30 chars, alphanumeric or _)."
-      },
-      email: {
-        regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        message: "Enter a valid institutional email address."
-      },
-      mobile: {
-        regex: /^[6-9]\d{9}$/,
-        message: "Mobile number must be a valid 10-digit Indian phone number starting with 6-9."
-      },
-      password: {
-        regex: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        message: "Password must be at least 8 chars with at least one letter, number, and special symbol."
-      },
-      course: {
-        validate: val => val && val.trim() !== "",
-        message: "Please select an academic program."
-      },
-      year: {
-        validate: val => val && val.trim() !== "",
-        message: "Please select your academic year."
-      },
-      terms: {
-        validate: el => el.checked,
-        message: "You must accept the academic guidelines to register."
-      }
+      fullName: { regex: /^[A-Za-z][A-Za-z .'-]{2,39}$/, message: "Full name must be 3-40 letters." },
+      username: { regex: /^[a-z][a-z0-9_]{2,29}$/, message: "Username must be 3-30 chars, starting with letter." },
+      email: { regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Enter a valid email address." },
+      mobile: { regex: /^[6-9]\d{9}$/, message: "10-digit mobile starting with 6-9." },
+      password: { regex: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/, message: "Min 8 chars, 1 letter, 1 number, 1 special character." }
     };
 
-    function validateField(fieldId) {
-      const field = document.getElementById(fieldId);
-      const errEl = document.getElementById(fieldId + "Error");
-      if (!field || !errEl) return true;
-
-      const rule = rules[fieldId];
-      let isValid = true;
-
-      if (rule.regex) {
-        isValid = rule.regex.test(field.value.trim());
-      } else if (rule.validate) {
-        isValid = rule.validate(field);
-      }
-
+    function validate(id) {
+      const el = document.getElementById(id);
+      const err = document.getElementById(id + "Error");
+      if (!el || !err) return true;
+      const isValid = rules[id].regex.test(el.value.trim());
       if (!isValid) {
-        field.classList.add("invalid");
-        errEl.textContent = rule.message;
+        el.classList.add("invalid");
+        err.textContent = rules[id].message;
         return false;
-      } else {
-        field.classList.remove("invalid");
-        errEl.textContent = "";
-        return true;
       }
+      el.classList.remove("invalid");
+      err.textContent = "";
+      return true;
     }
 
-    // Password Confirm validation
-    function validateConfirmPassword() {
-      const pwd = document.getElementById("password").value;
-      const cpwd = document.getElementById("confirmPassword");
-      const errEl = document.getElementById("confirmPasswordError");
-      if (!cpwd || !errEl) return true;
-
-      if (cpwd.value !== pwd || cpwd.value.trim() === "") {
-        cpwd.classList.add("invalid");
-        errEl.textContent = "Passwords do not match.";
-        return false;
-      } else {
-        cpwd.classList.remove("invalid");
-        errEl.textContent = "";
-        return true;
-      }
-    }
-
-    // Password Strength Meter
-    const pwdInput = document.getElementById("password");
-    const meterBar = document.getElementById("passwordMeterBar");
-    const meterText = document.getElementById("passwordMeterText");
-
-    if (pwdInput && meterBar && meterText) {
-      pwdInput.addEventListener("input", function () {
-        const val = this.value;
-        let score = 0;
-        if (val.length >= 8) score++;
-        if (/[A-Z]/.test(val)) score++;
-        if (/[0-9]/.test(val)) score++;
-        if (/[^A-Za-z0-9]/.test(val)) score++;
-
-        if (score === 0) {
-          meterBar.style.width = "0%";
-          meterText.textContent = "Password strength";
-        } else if (score <= 2) {
-          meterBar.style.width = "35%";
-          meterBar.style.backgroundColor = "var(--danger)";
-          meterText.textContent = "Weak password";
-        } else if (score === 3) {
-          meterBar.style.width = "70%";
-          meterBar.style.backgroundColor = "var(--warning)";
-          meterText.textContent = "Medium strength";
-        } else {
-          meterBar.style.width = "100%";
-          meterBar.style.backgroundColor = "var(--success)";
-          meterText.textContent = "Strong password";
-        }
-      });
-    }
-
-    // Attach real-time validation listeners
-    ["fullName", "username", "email", "mobile", "password", "course", "year"].forEach(id => {
-      const input = document.getElementById(id);
-      if (input) {
-        input.addEventListener("input", () => validateField(id));
-        input.addEventListener("blur", () => validateField(id));
-      }
+    ["fullName", "username", "email", "mobile", "password"].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.addEventListener("input", () => validate(id));
     });
 
-    const cpwdInput = document.getElementById("confirmPassword");
-    if (cpwdInput) {
-      cpwdInput.addEventListener("input", validateConfirmPassword);
-      cpwdInput.addEventListener("blur", validateConfirmPassword);
-    }
-
     regForm.addEventListener("submit", function (e) {
-      let isFormValid = true;
-      ["fullName", "username", "email", "mobile", "password", "course", "year", "terms"].forEach(id => {
-        if (!validateField(id)) isFormValid = false;
+      let valid = true;
+      ["fullName", "username", "email", "mobile", "password"].forEach(id => {
+        if (!validate(id)) valid = false;
       });
-
-      if (!validateConfirmPassword()) isFormValid = false;
-
-      if (!isFormValid) {
-        e.preventDefault();
-      }
+      if (!valid) e.preventDefault();
     });
   }
 });

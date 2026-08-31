@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "How do I check my subject-wise attendance?",
+    "answer": "Navigate to the Attendance section from the top navigation bar. You will see real-time lecture counts, attended sessions, percentage, and exam eligibility flags."
+  },
+  {
+    "id": 2,
+    "question": "What is the minimum attendance threshold required for semester exams?",
+    "answer": "CHARUSAT university regulations mandate a minimum of 80% cumulative attendance in every registered course to be eligible for end-semester examinations."
+  },
+  {
+    "id": 3,
+    "question": "How can I register for upcoming campus hackathons and technical symposiums?",
+    "answer": "Visit the Events tab, filter by 'Technical' or search for your event of interest, and click on the 'Register' button on the event card."
+  },
+  {
+    "id": 4,
+    "question": "Where do I find my official semester grade card?",
+    "answer": "Log into the student portal and click on 'Results'. Your complete credit breakdown, SGPA, CGPA, and theory/practical grades are listed there."
+  },
+  {
+    "id": 5,
+    "question": "How are fee payment receipts generated?",
+    "answer": "Go to the 'Fees' page to view cleared transactions and download official payment receipts with unique transaction reference numbers."
+  },
+  {
+    "id": 6,
+    "question": "Can I access the StudentHub portal on mobile browsers?",
+    "answer": "Yes! StudentHub is built mobile-first using CSS Flexbox and Grid. Use the hamburger menu icon (☰) at the top to navigate on smaller screens."
+  },
+  {
+    "id": 7,
+    "question": "How do I switch between Dark and Light mode?",
+    "answer": "Click the moon/sun icon in the top right utility toolbar. Your preference is automatically remembered in your browser storage for future visits."
+  },
+  {
+    "id": 8,
+    "question": "What should I do if I forget my account password?",
+    "answer": "Contact your department faculty advisor or submit a support inquiry using the form in the 'Contact' page."
+  },
+  {
+    "id": 9,
+    "question": "How often is the weekly academic timetable updated?",
+    "answer": "Timetables are maintained by the Dean's office and updated at the commencement of each semester, with notifications issued for temporary classroom shifts."
+  },
+  {
+    "id": 10,
+    "question": "Where are faculty consultation hours listed?",
+    "answer": "The 'Faculty' directory provides comprehensive details including professors' office locations, email addresses, and designated student mentoring slots."
+  },
+  {
+    "id": 11,
+    "question": "How is my personal information protected?",
+    "answer": "StudentHub uses password hashing (BCRYPT), prepared SQL statements, strict session timeouts, CSRF tokens, and role-based access control."
+  },
+  {
+    "id": 12,
+    "question": "Can I update my registered mobile number?",
+    "answer": "Yes, submit an update request through your student dashboard or visit the academic administration window."
+  },
+  {
+    "id": 13,
+    "question": "What co-curricular events earn institutional credits?",
+    "answer": "Events tagged with 'Workshop' or 'Technical Symposium' offer participation certificates that can be submitted for non-formal course credits."
+  },
+  {
+    "id": 14,
+    "question": "How do I report technical bugs or submission errors?",
+    "answer": "Use the interactive query form on the Contact page or email helpdesk@studenthub.charusat.ac.in."
+  },
+  {
+    "id": 15,
+    "question": "Are semester exam result grade sheets verifiable online?",
+    "answer": "Yes, grade sheets include institutional verification reference keys for official transcript validation."
+  }
+]

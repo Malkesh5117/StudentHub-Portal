@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Malkesh Patel",
+    "roll": "25DCS089",
+    "achievement": "Top Ranker in Web Development Frameworks & Lead Developer of StudentHub Portal."
+  },
+  {
+    "id": 2,
+    "name": "Diya Patel",
+    "roll": "25DCS004",
+    "achievement": "Winner of State-Level Smart Gujarat Hackathon 2026."
+  },
+  {
+    "id": 3,
+    "name": "Aarav Sharma",
+    "roll": "25DCS001",
+    "achievement": "Author of research paper on Cloud Native Container Security."
+  }
+]

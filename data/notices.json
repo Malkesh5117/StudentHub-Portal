@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Commencement of 3rd Semester Classes",
+    "date": "2026-08-01",
+    "department": "Dean Academic",
+    "content": "All students are informed that odd semester academic sessions have officially begun."
+  },
+  {
+    "id": 2,
+    "title": "Submission of Examination Enrollment Forms",
+    "date": "2026-08-15",
+    "department": "Examination Cell",
+    "content": "Last date to verify course registrations and submit exam enrollment is September 10, 2026."
+  },
+  {
+    "id": 3,
+    "title": "Library Digital IEEE Database Access",
+    "date": "2026-08-25",
+    "department": "Central Library",
+    "content": "Campus-wide institutional IEEE Xplore access has been renewed. Use your student credentials."
+  },
+  {
+    "id": 4,
+    "title": "TechFest 2026 Organizing Committee Selection",
+    "date": "2026-09-02",
+    "department": "Student Affairs",
+    "content": "Interviews for student event coordinators and volunteers will be held this Saturday."
+  },
+  {
+    "id": 5,
+    "title": "Mid-Term Examination Schedule Released",
+    "date": "2026-09-12",
+    "department": "FTE Department",
+    "content": "Detailed seating plan and time slots for mid-term tests are now posted on the notice board."
+  }
+]

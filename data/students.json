@@ -1,0 +1,182 @@
+[
+  {
+    "roll_no": "25DCS089",
+    "name": "Malkesh Patel",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.92,
+    "email": "malkesh.patel@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS001",
+    "name": "Aarav Sharma",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.85,
+    "email": "aarav.sharma@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS002",
+    "name": "Meera Gupta",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 9.15,
+    "email": "meera.gupta@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS003",
+    "name": "Rohan Varma",
+    "program": "B.Tech IT",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.4,
+    "email": "rohan.varma@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS004",
+    "name": "Diya Patel",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 9.42,
+    "email": "diya.patel@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS005",
+    "name": "Ananya Iyer",
+    "program": "B.Tech CE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.78,
+    "email": "ananya.iyer@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS006",
+    "name": "Devendra Joshi",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.65,
+    "email": "devendra.joshi@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS008",
+    "name": "Ishaan Mehta",
+    "program": "B.Tech IT",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.95,
+    "email": "ishaan.mehta@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS009",
+    "name": "Kavya Nair",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 9.08,
+    "email": "kavya.nair@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS010",
+    "name": "Aditya Shah",
+    "program": "B.Tech CE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.35,
+    "email": "aditya.shah@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS011",
+    "name": "Pooja Trivedi",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.7,
+    "email": "pooja.trivedi@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS012",
+    "name": "Siddharth Rao",
+    "program": "B.Tech IT",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.52,
+    "email": "siddharth.rao@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS013",
+    "name": "Tanvi Desai",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 9.2,
+    "email": "tanvi.desai@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS014",
+    "name": "Varun Kulkarni",
+    "program": "B.Tech CE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.45,
+    "email": "varun.kulkarni@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS015",
+    "name": "Zoya Khan",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 9.35,
+    "email": "zoya.khan@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS016",
+    "name": "Harsh Pandya",
+    "program": "B.Tech IT",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.6,
+    "email": "harsh.pandya@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS017",
+    "name": "Bhavya Dave",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.8,
+    "email": "bhavya.dave@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS018",
+    "name": "Nidhi Rajput",
+    "program": "B.Tech CE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.9,
+    "email": "nidhi.rajput@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS019",
+    "name": "Chirag Prajapati",
+    "program": "B.Tech CSE",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 8.3,
+    "email": "chirag.prajapati@studenthub.edu"
+  },
+  {
+    "roll_no": "25DCS020",
+    "name": "Riddhi Solanki",
+    "program": "B.Tech IT",
+    "year": "2nd Year",
+    "semester": 3,
+    "cgpa": 9.05,
+    "email": "riddhi.solanki@studenthub.edu"
+  }
+]
