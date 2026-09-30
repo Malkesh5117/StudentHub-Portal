@@ -1,0 +1,26 @@
+# ========================================================
+# StudentHub Portal - Apache Security & Routing Config
+# Practical 15: Deployment & Security Hardening
+# Developed by Malkesh Patel (25DCS089)
+# ========================================================
+
+# Disable directory browsing
+Options -Indexes +FollowSymLinks
+
+# Prevent direct access to sensitive configuration, database, and log files
+<FilesMatch "\.(sql|log|env|ini|bak|csv)$">
+  Require all denied
+</FilesMatch>
+
+# Security Headers
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-XSS-Protection "1; mode=block"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Custom Error Documents
+ErrorDocument 403 "Access Denied: You do not have permission to view this resource."
+ErrorDocument 404 "Resource Not Found: The requested portal page does not exist."
+ErrorDocument 500 "Internal Server Error: An unexpected server error occurred."
